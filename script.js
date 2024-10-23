@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-<<<<<<< HEAD
 
   function showSidebar(event) {
     event.preventDefault(); // Prevent page refresh
@@ -39,7 +38,6 @@ function hideSidebar(event) {
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'none';
 }
-=======
   document.addEventListener('DOMContentLoaded', () => {
     const icons = document.querySelector('.social-icons');
     icons.style.left = '20px'; // Move icons into view
@@ -51,4 +49,3 @@ function hideSidebar(event) {
         }, index * 200); // Stagger the fade-in effect
     });
 });
->>>>>>> ddcf2d53f1317085c01d31a6f8ab824a154bae32
