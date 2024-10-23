@@ -24,3 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const icons = document.querySelector('.social-icons');
+    icons.style.left = '20px'; // Move icons into view
+    const iconLinks = document.querySelectorAll('.social-icons a');
+
+    iconLinks.forEach((icon, index) => {
+        setTimeout(() => {
+            icon.style.opacity = '1'; // Fade in each icon
+        }, index * 200); // Stagger the fade-in effect
+    });
+});
