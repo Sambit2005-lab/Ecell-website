@@ -97,22 +97,24 @@ body, html {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
   }
 
   nav li{
-    height: 50px;
+    height: 75px;
   }
 
   nav a{
     height: 100%;
     padding: 0px 30px;
-    margin-right: 10px;
+    margin-right: 20px;
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: black;
+    color: whitesmoke;
+    font-family: poppins;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 400;
   }
 
   nav a:hover{
@@ -236,7 +238,7 @@ body, html {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
     text-align: center;
     z-index: 2;
-    animation: fadeInLeft 2s ease-in-out forwards;
+    animation: fadeInLeft 4s ease-in-out forwards;
    
     padding-left: 2%;
     
@@ -293,7 +295,7 @@ body, html {
   position: absolute;
   width: 100 ;  /* Makes the bulb proportional */
   height: 100vh; /* Adjust for responsiveness */
-  top: 50%;
+  top: 53%;
   left: 80%;
   transform: translate(-50%, -50%);
   object-fit: contain;
@@ -305,18 +307,18 @@ body, html {
 
 .social-icons {
   display: flex;
-  top: 80%;
+  top: 90%;
   transform: translateY(-50%);
   flex-direction: column; /* Arrange icons vertically */
   position: absolute;
   left: -50px; /* Start outside the viewport */
-  transition: left 0.5s ease; /* Smooth transition */
+  transition: left 3s ease; /* Smooth transition */
 }
 
 .social-icons a {
   margin: 10px 0; /* Space between icons */
   opacity: 0; /* Start with icons invisible */
-  transition: opacity 0.5s ease; /* Smooth fade-in transition */
+  transition: opacity 3s ease; /* Smooth fade-in transition */
 }
 
 .home:hover .social-icons {
@@ -325,4 +327,21 @@ body, html {
 
 .home:hover .social-icons a {
   opacity: 1; /* Fade in icons when hovered */
+}
+
+
+.home .btn{
+  height: 37px;
+  width: 37px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 7;
+}
+
+
+.btn:hover{
+  transform: scale(1.5);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
