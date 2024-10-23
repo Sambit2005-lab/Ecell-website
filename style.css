@@ -1,16 +1,117 @@
 /* Reset some default browser styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+/* GIF Background Container */
+.gif-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Ensure the GIF stays behind everything else */
+  overflow: hidden;
+}
+
+.gif-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the GIF covers the full area */
+}
+
+/* PNG Overlay */
+.overlay {
+  position: absolute;
+   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1; /* Place the overlay content above the GIF */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensures the PNG image covers the full area */
+  z-index: 2; /* Keep it above the GIF */
+  opacity: 0.4; /* Set transparency for PNG if needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Animations */
+
+
+/* Fade-in-right animation */
+@keyframes fadeInLeft {
+  0% {
+      opacity: 0;               /* Start transparent */
+      transform: translateX(0px); /* Start slightly to the right */
   }
-  
-  body, html {
-    height: 100%;
-    overflow: auto;
-    scroll-behavior: smooth;
+  100% {
+      opacity: 1;               /* Fully visible */
+      transform: translateX(20px); /* End at original position */
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home Page Section */
+
+
+
+.welcome{
+  display: flex;
+  justify-content:left;
+  align-items:center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 75px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 800; /* Normal weight */
+  opacity: 1;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+  text-align: center;
+  z-index: 2;
+  animation: fadeInLeft 2s ease-in-out forwards;
+ 
+  padding-left: 2%;
   
+<<<<<<< HEAD
   /* GIF Background Container */
   .gif-background {
     position: absolute;
@@ -285,3 +386,82 @@
     opacity: 1;
     
   }
+=======
+}
+
+
+.home {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background:url(image/youtube-video-gif.gif);
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+/* About Us section */
+
+.vertical-line{
+  width: 5px;
+  height: 100px;
+  background: #6b0000;
+}
+
+
+.about {
+  height: 100vh;  /* Fullscreen section */
+  background-color: #ccc5c5;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.bulb {
+  position: absolute;
+  width: 100 ;  /* Makes the bulb proportional */
+  height: 100vh; /* Adjust for responsiveness */
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  opacity: 1;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  z-index: 3;
+}
+
+
+.social-icons {
+  display: flex;
+  top: 80%;
+  transform: translateY(-50%);
+  flex-direction: column; /* Arrange icons vertically */
+  position: absolute;
+  left: -50px; /* Start outside the viewport */
+  transition: left 0.5s ease; /* Smooth transition */
+}
+
+.social-icons a {
+  margin: 10px 0; /* Space between icons */
+  opacity: 0; /* Start with icons invisible */
+  transition: opacity 0.5s ease; /* Smooth fade-in transition */
+}
+
+.home:hover .social-icons {
+  left: 20px; /* Move icons into view */
+}
+
+.home:hover .social-icons a {
+  opacity: 1; /* Fade in icons when hovered */
+}
+>>>>>>> ddcf2d53f1317085c01d31a6f8ab824a154bae32
